@@ -24,8 +24,6 @@ export default function NavbarAdmin({ title, nameUser }) {
     navigate("/");
   };
 
- 
-
   // dropdown profile
   const content = (
     <Popover variant="dark" id="dropdown" className="list-dropdown ">
@@ -45,12 +43,7 @@ export default function NavbarAdmin({ title, nameUser }) {
                   <span className="fw-bold text-decoration-none text-white">Add Artis</span>
                 </Link>
               </li>
-              <li className="mb-3">
-                <Link to="/complain">
-                  <img src={AddArtis} alt="" width="20" className="me-2" />
-                  <span className="fw-bold text-decoration-none text-white">Complain</span>
-                </Link>
-              </li>
+
               <li className="mb-3">
                 <button className="btn-transparent" onClick={logout}>
                   <img src={Logout} alt="" width="25" className="me-2" />
@@ -72,12 +65,7 @@ export default function NavbarAdmin({ title, nameUser }) {
                   <span className="fw-bold text-decoration-none text-white">Add Artis</span>
                 </Link>
               </li>
-              <li className="mb-3">
-                <Link to="/complain">
-                  <img src={AddArtis} alt="" width="20" className="me-2" />
-                  <span className="fw-bold text-decoration-none text-white">Complain</span>
-                </Link>
-              </li>
+
               <li className="mb-3">
                 <button className="btn-transparent" onClick={logout}>
                   <img src={Logout} alt="" width="25" className="me-2" />

@@ -71,12 +71,7 @@ export default function NavbarWeb({ title, nameUser }) {
                   <span className="fw-bold ">Pay</span>
                 </Link>
               </li>
-              <li className="mb-3">
-                <Link to="/user-complain">
-                  <img src={Pay} alt="" width="30" className="me-2" />
-                  <span className="fw-bold ">Complain</span>
-                </Link>
-              </li>
+
               <li>
                 <button className="btn-transparent" onClick={logout}>
                   <img src={Logout} alt="" width="25" className="me-2" />

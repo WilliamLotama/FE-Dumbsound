@@ -58,15 +58,14 @@ export default function Home() {
               {/* Belum Login */}
               {musics?.map((item) => (
                 <Card key={item.id} className="text-nolink card-music bg-var-dark-gray mb-2">
-                  {/* Button untuk trigger Login */}
-                  <Link to={handleClickLogin}>
+                  <Link to="#">
                     <img src={item.thumbnail} class="card-image" alt="" />
                   </Link>
-                  <div className="d-flex justify-content-start mt-2 ">
+                  <div className="d-flex justify-content-between mt-2 ">
                     <span className="fw-bold ">{item.title}</span>
                     <span>{item.year}</span>
                   </div>
-                  <div className="d-flex justify-content-start mt-2 ">
+                  <div className="d-flex justify-content-between mt-2 ">
                     <span className="text-small">{item.artis.name}</span>
                   </div>
                 </Card>

@@ -23,7 +23,7 @@ const Pricing = () => {
     //change this to the script source you want to load, for example this is snap.js sandbox env
     const midtransScriptUrl = "https://app.sandbox.midtrans.com/snap/snap.js";
     //change this according to your client-key
-    const myMidtransClientKey = "SB-Mid-client-WDT3L6j4e2r31Gf8";
+    const myMidtransClientKey = "SB-Mid-client-HxDwCdRcPjxBYo2O";
 
     let scriptTag = document.createElement("script");
     scriptTag.src = midtransScriptUrl;

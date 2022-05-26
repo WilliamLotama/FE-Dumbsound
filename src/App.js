@@ -8,12 +8,13 @@ import {
   AddMusic,
   AddArtis,
   Pricing,
-  UserComplain,
-  AdminComplain,
+  complain,
+  ComplainAdmin,
 } from "./pages/Index";
 
 import { UserContext } from "./context/userContext";
 import { setAuthToken, API } from "./config/api";
+import Complain from "./pages/user/Complain";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -23,7 +24,8 @@ function App() {
   const navigate = useNavigate();
 
   // Init user context
-  const [dispatch] = useContext(UserContext);
+  const [state,dispatch] = useContext(UserContext);
+ 
 
   // Create function for "check user token"
   const checkUser = async () => {
@@ -64,9 +66,8 @@ function App() {
         <Route path="/pay" element={<Pricing />} />
         <Route path="/add-music" element={<AddMusic />} />
         <Route path="/add-artis" element={<AddArtis />} />
-        <Route exact path="/complain" element={<AdminComplain />} />
-        <Route exact path="/user-complain" element={<UserComplain />} />
       </Routes>
+      {state.isLogin ? state?.user?.status === "admin" ? <ComplainAdmin /> : <Complain /> : <></>}
     </>
   );
 }
